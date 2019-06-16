@@ -9,7 +9,6 @@ use Config;
 use FTP;
 use ZIP;
 use File;
-//use ZipArchive;
 
 class BackupTransfer extends Command
 {
@@ -35,7 +34,6 @@ class BackupTransfer extends Command
     public function __construct()
     {
         parent::__construct();
-        //$this->zip = new ZipArchive();
     }
 
     /**
@@ -117,67 +115,5 @@ class BackupTransfer extends Command
         } else {
             $this->error('Invalid login cradentials.');
         }
-        
-
-//echo "<pre>"; print_r($this->zipFile); exit;
-// $this->createZip(
-//     array(
-//         public_path() . DIRECTORY_SEPARATOR . 'test.txt',
-//         public_path() . DIRECTORY_SEPARATOR . 'index.php'
-//     ),
-//     public_path() . DIRECTORY_SEPARATOR
-// );
-/*echo "<pre>"; print_r(
-    Zip::add(
-        array(
-            public_path() . DIRECTORY_SEPARATOR . 'test.txt',
-            public_path() . DIRECTORY_SEPARATOR . 'index.php'
-        ),
-        public_path()
-    )); exit;*/
-        // $this->info('Starting backup script...');
-
-        // $this->info('Check and Connect to source FTP!');
-
-        //$sourceFtpConnection = FTP::connection()->getDirListing();
-        //echo "<pre>"; print_r($sourceFtpConnection); exit;
-        // $sourceFtpConnection = FTP::connection('destination')->downloadFile(
-        //     './done/Functional_Testing_Network_Components.zip',
-        //     public_path() . DIRECTORY_SEPARATOR . 'test' . DIRECTORY_SEPARATOR ,
-        //     FTP_BINARY
-        // );
-//lk,j njk,jecho base_path() . DIRECTORY_SEPARATOR . '2019-06-16-11-40-41.zip'; exit;
-        // $destinationFTPConnection = FTP::connection('destination')->uploadFile(
-        //     base_path() . DIRECTORY_SEPARATOR . '2019-06-16-11-40-41.zip',
-        //     '.done/2019-06-16-11-40-41.zip',
-        //     FTP_BINARY
-        // );
-//         $destinationFTPConnection = FTP::connection('destination')->delete('.done/sourcetest.txt');
-//echo "<pre>"; var_dump($destinationFTPConnection); exit;        
-        /*$destinationFTPConnection = FTP::connection('destination')->downloadDirectory(
-            '.done',
-            public_path() . DIRECTORY_SEPARATOR . 'test' . DIRECTORY_SEPARATOR
-        );*/
-
-        /*$destinationFTPConnection = FTP::connection('destination')->getDirListingDetailed();
-echo "<pre>"; print_r($destinationFTPConnection); exit;*/
-
     }
-
-
-    /**
-     * createZip description
-     * @param  array  $files [description]
-     * @return [type]        [description]
-     */
-    // public function createZip(array $files, $zipFilePath = '', $zipFileName = 'backup_sanjay.zip') {
-
-    //     $this->zip->open($zipFileName, ZipArchive::CREATE);
-
-    //     foreach ($files as $key => $file) {
-    //         $this->zip->addFile($file, basename($file));
-    //     }
-
-    //     $this->zip->close();
-    // }
 }
