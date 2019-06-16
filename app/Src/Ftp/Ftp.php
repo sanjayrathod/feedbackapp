@@ -238,14 +238,6 @@ class Ftp {
             # Remove trailing slash
             $remote_dir = rtrim($remote_dir, DIRECTORY_SEPARATOR);
 
-            # If local_dir do not ends with /
-            /*if(!HString::ends_with($local_dir, '/'))
-            {
-                # Create first level directory on remote filesystem
-                $remote_dir = $remote_dir . DIRECTORY_SEPARATOR . basename($local_dir);
-                @ftp_mkdir($cid, $remote_dir);
-            }*/
-
             if($this->is_dir($remote_dir)) {
                 $upload = self::upload_all($local_dir, $remote_dir);
             }
@@ -267,7 +259,7 @@ class Ftp {
      */
     public static function upload_all($local_dir, $remote_dir) {
         $uploaded_all = false;
-        echo "HERE"; exit;
+
         try
         {
             # Create remote directory
