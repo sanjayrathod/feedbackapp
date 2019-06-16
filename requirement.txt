@@ -1,0 +1,6 @@
+write a cron for copying folder from one machine to other machine.
+First make zip of folder and then transfer to other machine.
+
+host: localhost
+password: localhost
+FTP Server port: 14147
