@@ -97,8 +97,6 @@ class BackupTransfer extends Command
                             FTP_BINARY
                         );
 
-                        var_dump($uploadStatus);
-
                         $this->info('Zip file uploaded successfully');
 
                         FTP::disconnect('destination');
